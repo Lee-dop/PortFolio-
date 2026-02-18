@@ -11,7 +11,7 @@
     .hero{text-align:center;padding:120px 0;}
     h1{font-size:52px;margin:0;font-weight:600;}
     .subtitle{margin-top:24px;color:var(--muted);font-size:18px;}
-    .tabs{display:flex;gap:60px;justify-content:center;margin-bottom:80px;letter-spacing:.2em;user-select:none;}
+    .tabs{display:flex;gap:60px;justify-content:center;margin-bottom:80px;letter-spacing:.2em;user-select:none;flex-wrap:wrap;}
     .tab{cursor:pointer;border-bottom:1px solid transparent;padding-bottom:8px;opacity:.5;}
     .tab.active{border-bottom:1px solid #fff;opacity:1;}
     .video{position:relative;width:100%;padding-top:56.25%;background:#000;border-radius:16px;overflow:hidden;margin-bottom:100px;}
@@ -22,13 +22,50 @@
       background:rgba(0,0,0,.35);padding:6px 10px;border-radius:6px;
       text-shadow:0 2px 12px rgba(0,0,0,.6);
     }
+
     section{padding:100px 0;border-top:1px solid var(--line);}
     h2{margin:0 0 60px;}
     h3{margin:40px 0 10px;color:var(--muted);letter-spacing:.15em;font-size:14px;font-weight:600;}
     p{margin:6px 0;}
     a{color:var(--muted);text-decoration:none;}
     footer{text-align:center;color:#666;padding:80px 0;font-size:13px;border-top:1px solid var(--line);}
-    @media (max-width:640px){h1{font-size:40px}.tabs{gap:30px}}
+    @media (max-width:640px){h1{font-size:40px}.tabs{gap:24px}}
+
+    /* Contact quick links */
+    .contact-grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:14px;
+      max-width:520px;
+    }
+    @media (min-width:720px){
+      .contact-grid{grid-template-columns: 1fr 1fr;}
+    }
+    .contact-card{
+      display:flex;align-items:center;gap:12px;
+      padding:16px 18px;border-radius:14px;
+      border:1px solid rgba(255,255,255,.16);
+      background:rgba(0,0,0,.12);
+      color:rgba(255,255,255,.9);
+      letter-spacing:.06em;
+    }
+    .contact-emoji{font-size:22px;line-height:1;}
+    .contact-label{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.55);}
+    .contact-value{margin-top:2px;font-size:14px;color:rgba(255,255,255,.9);letter-spacing:.04em;}
+    .contact-card:active{transform:translateY(1px)}
+    .contact-note{color:rgba(255,255,255,.6);font-size:12px;letter-spacing:.06em;margin-top:14px;max-width:520px;}
+    .btn-copy{
+      margin-left:auto;
+      font-size:11px;
+      letter-spacing:.16em;
+      text-transform:uppercase;
+      color:rgba(255,255,255,.8);
+      border:1px solid rgba(255,255,255,.22);
+      background:rgba(0,0,0,.15);
+      padding:7px 10px;
+      border-radius:999px;
+      cursor:pointer;
+    }
   </style>
 </head>
 <body>
@@ -41,6 +78,8 @@
     <div class="tabs" aria-label="Work categories">
       <div class="tab active" data-tab="film" role="button" tabindex="0">FILM</div>
       <div class="tab" data-tab="viral" role="button" tabindex="0">VIRAL</div>
+      <div class="tab" data-tab="career" role="button" tabindex="0">CAREER</div>
+      <div class="tab" data-tab="contact" role="button" tabindex="0">CONTACT</div>
     </div>
 
     <!-- FILM -->
@@ -103,63 +142,97 @@
       </div>
     </div>
 
-    <!-- CAREER -->
-    <section>
-      <h2>Career</h2>
+    <!-- CAREER (moved from bottom) -->
+    <div id="career" class="panel" style="display:none;">
+      <section style="padding-top:0;border-top:none;">
+        <h2>Career</h2>
 
-      <h3>Director of Photography</h3>
-      <div style="margin-top:30px;">
-        <div style="margin-bottom:10px;opacity:.6;">Feature Film</div>
-        <p>Hakel Dema</p>
-      </div>
+        <h3>Director of Photography</h3>
+        <div style="margin-top:30px;">
+          <div style="margin-bottom:10px;opacity:.6;">Feature Film</div>
+          <p>Hakel Dema</p>
+        </div>
 
-      <div style="margin-top:30px;">
-        <div style="margin-bottom:10px;opacity:.6;">Short Film</div>
-        <p>러브 인 바이러스</p>
-        <p>호접몽</p>
-        <p>소희</p>
-        <p>혹한</p>
-        <p>여로</p>
-      </div>
+        <div style="margin-top:30px;">
+          <div style="margin-bottom:10px;opacity:.6;">Short Film</div>
+          <p>러브 인 바이러스</p>
+          <p>호접몽</p>
+          <p>소희</p>
+          <p>혹한</p>
+          <p>여로</p>
+        </div>
 
-      <div style="margin-top:30px;">
-        <div style="margin-bottom:10px;opacity:.6;">Viral</div>
-        <p>Boy Next Door ASMR</p>
-        <p>Wol's Project (3 clips)</p>
-      </div>
+        <div style="margin-top:30px;">
+          <div style="margin-bottom:10px;opacity:.6;">Viral</div>
+          <p>Boy Next Door ASMR</p>
+          <p>Wol's Project (3 clips)</p>
+        </div>
 
-      <h3 style="margin-top:70px;">Assistant Camera</h3>
-      <div style="margin-top:30px;line-height:1.8;">
-        <p>라이어 — 2nd AC</p>
-        <p>키스는 괜히해서 — 2nd AC</p>
-        <p>슬픈열대 — 2nd AC</p>
-        <p>나인퍼즐 — 2nd AC</p>
-        <p>열녀박씨 계약결혼뎐 — 2nd AC</p>
-        <p>기생수 : 더 그레이 — 2nd AC</p>
-        <p>블라인드 — 2nd AC</p>
-        <p>검은소년 — 2nd AC</p>
-        <p>마인 — 3rd AC (B Unit)</p>
-        <p>갯마을 차차차 — 3rd AC (B Unit)</p>
-        <p>보호자 — 3rd AC</p>
-        <p>더 킹 : 영원의 군주 — 3rd AC</p>
-        <p>출장수사 — 3rd AC</p>
-        <p>어비스 — 3rd AC (B Unit)</p>
-        <p>아내를 죽였다 — 3rd AC</p>
-        <p>비스트 — 4th AC</p>
-      </div>
-    </section>
+        <h3 style="margin-top:70px;">Assistant Camera</h3>
+        <div style="margin-top:30px;line-height:1.8;">
+          <p>라이어 — 2nd AC</p>
+          <p>키스는 괜히해서 — 2nd AC</p>
+          <p>슬픈열대 — 2nd AC</p>
+          <p>나인퍼즐 — 2nd AC</p>
+          <p>열녀박씨 계약결혼뎐 — 2nd AC</p>
+          <p>기생수 : 더 그레이 — 2nd AC</p>
+          <p>블라인드 — 2nd AC</p>
+          <p>검은소년 — 2nd AC</p>
+          <p>마인 — 3rd AC (B Unit)</p>
+          <p>갯마을 차차차 — 3rd AC (B Unit)</p>
+          <p>보호자 — 3rd AC</p>
+          <p>더 킹 : 영원의 군주 — 3rd AC</p>
+          <p>출장수사 — 3rd AC</p>
+          <p>어비스 — 3rd AC (B Unit)</p>
+          <p>아내를 죽였다 — 3rd AC</p>
+          <p>비스트 — 4th AC</p>
+        </div>
+      </section>
+    </div>
 
     <!-- CONTACT -->
-    <section>
-      <h2>Contact</h2>
-      <p><a href="mailto:sish0905@gmail.com">sish0905@gmail.com</a></p>
-      <p><a href="https://instagram.com/leeseuneun" target="_blank" rel="noopener noreferrer">Instagram @leeseuneun</a></p>
-    </section>
+    <div id="contact" class="panel" style="display:none;">
+      <section style="padding-top:0;border-top:none;">
+        <h2>Contact</h2>
+
+        <div class="contact-grid">
+          <a class="contact-card" href="https://instagram.com/leeseuneun" target="_blank" rel="noopener noreferrer" aria-label="Open Instagram">
+            <div class="contact-emoji">📷</div>
+            <div>
+              <div class="contact-label">Instagram</div>
+              <div class="contact-value">@leeseuneun</div>
+            </div>
+          </a>
+
+          <a class="contact-card" href="mailto:sish0905@gmail.com" aria-label="Send Email">
+            <div class="contact-emoji">✉️</div>
+            <div>
+              <div class="contact-label">Mail</div>
+              <div class="contact-value">sish0905@gmail.com</div>
+            </div>
+          </a>
+
+          <div class="contact-card" role="button" tabindex="0" id="kakaoCard" aria-label="Open KakaoTalk or copy ID">
+            <div class="contact-emoji">💬</div>
+            <div>
+              <div class="contact-label">KakaoTalk</div>
+              <div class="contact-value">sish0905</div>
+            </div>
+            <button class="btn-copy" type="button" id="copyBtn">Copy</button>
+          </div>
+        </div>
+
+        <div class="contact-note">
+          Tip: On mobile, tapping KakaoTalk may open the app. On desktop, the ID will copy so you can paste it in KakaoTalk search.
+        </div>
+      </section>
+    </div>
 
     <footer>© 2026 Lee Seungeun. All rights reserved.</footer>
   </div>
 
   <script>
+    // Tabs
     const tabs = document.querySelectorAll(".tab");
     const panels = document.querySelectorAll(".panel");
 
@@ -173,6 +246,43 @@
       t.addEventListener("keydown", (e) => {
         if (e.key === "Enter" || e.key === " ") show(t.dataset.tab);
       });
+    });
+
+    // Kakao: best-effort deep link + copy
+    const KAKAO_ID = "sish0905";
+    const kakaoCard = document.getElementById("kakaoCard");
+    const copyBtn = document.getElementById("copyBtn");
+
+    async function copyKakaoId(){
+      try{
+        await navigator.clipboard.writeText(KAKAO_ID);
+        alert("KakaoTalk ID copied: " + KAKAO_ID);
+      }catch(e){
+        const ta = document.createElement("textarea");
+        ta.value = KAKAO_ID;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+        alert("KakaoTalk ID copied: " + KAKAO_ID);
+      }
+    }
+
+    function tryOpenKakao(){
+      window.location.href = "kakaotalk://";
+      copyKakaoId();
+    }
+
+    kakaoCard.addEventListener("click", (e) => {
+      if(e.target === copyBtn) return;
+      tryOpenKakao();
+    });
+    kakaoCard.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") tryOpenKakao();
+    });
+    copyBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      copyKakaoId();
     });
   </script>
 </body>
