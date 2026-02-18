@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lee Seungeun | Cinematographer</title>
+  <style>
+    :root{--bg:#2e2e2e;--text:#fff;--muted:#aaa;--line:#444;}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;}
+    .container{max-width:1100px;margin:0 auto;padding:40px 20px;}
+    .hero{text-align:center;padding:120px 0;}
+    h1{font-size:52px;margin:0;font-weight:600;}
+    .subtitle{margin-top:24px;color:var(--muted);font-size:18px;}
+    .tabs{display:flex;gap:60px;justify-content:center;margin-bottom:80px;letter-spacing:.2em;user-select:none;}
+    .tab{cursor:pointer;border-bottom:1px solid transparent;padding-bottom:8px;opacity:.5;}
+    .tab.active{border-bottom:1px solid #fff;opacity:1;}
+    .video{position:relative;width:100%;padding-top:56.25%;background:#000;border-radius:16px;overflow:hidden;margin-bottom:100px;}
+    iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+    .badge{
+      position:absolute;bottom:18px;left:18px;
+      letter-spacing:.12em;color:#fff;font-size:14px;
+      background:rgba(0,0,0,.35);padding:6px 10px;border-radius:6px;
+      text-shadow:0 2px 12px rgba(0,0,0,.6);
+    }
+    section{padding:100px 0;border-top:1px solid var(--line);}
+    h2{margin:0 0 60px;}
+    h3{margin:40px 0 10px;color:var(--muted);letter-spacing:.15em;font-size:14px;font-weight:600;}
+    p{margin:6px 0;}
+    a{color:var(--muted);text-decoration:none;}
+    footer{text-align:center;color:#666;padding:80px 0;font-size:13px;border-top:1px solid var(--line);}
+    @media (max-width:640px){h1{font-size:40px}.tabs{gap:30px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <h1>Lee Seungeun</h1>
+      <div class="subtitle">Cinematographer based in Seoul.</div>
+    </div>
+
+    <div class="tabs" aria-label="Work categories">
+      <div class="tab active" data-tab="film" role="button" tabindex="0">FILM</div>
+      <div class="tab" data-tab="viral" role="button" tabindex="0">VIRAL</div>
+    </div>
+
+    <!-- FILM -->
+    <div id="film" class="panel">
+      <div class="video">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/aBKHyPnMG9c?autoplay=1&mute=1&loop=1&playlist=aBKHyPnMG9c&controls=0&modestbranding=1&playsinline=1&rel=0"
+          title="러브 인 바이러스"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen></iframe>
+        <div class="badge">러브 인 바이러스</div>
+      </div>
+
+      <div class="video">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/y71DnTXWOSU?autoplay=1&mute=1&loop=1&playlist=y71DnTXWOSU&controls=0&modestbranding=1&playsinline=1&rel=0"
+          title="호접몽"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen></iframe>
+        <div class="badge">호접몽</div>
+      </div>
+
+      <div class="video">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/lP7rPHbls9o?autoplay=1&mute=1&loop=1&playlist=lP7rPHbls9o&controls=0&modestbranding=1&playsinline=1&rel=0"
+          title="소희"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen></iframe>
+        <div class="badge">소희</div>
+      </div>
+
+      <div class="video">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/0ynmyvdH9p0?autoplay=1&mute=1&loop=1&playlist=0ynmyvdH9p0&controls=0&modestbranding=1&playsinline=1&rel=0"
+          title="혹한"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen></iframe>
+        <div class="badge">혹한</div>
+      </div>
+    </div>
+
+    <!-- VIRAL -->
+    <div id="viral" class="panel" style="display:none;">
+      <div class="video">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/nfzuyIY45J8?autoplay=1&mute=1&loop=1&playlist=nfzuyIY45J8&controls=0&modestbranding=1&playsinline=1&rel=0"
+          title="BOY NEXT DOOR"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen></iframe>
+        <div class="badge">BOY NEXT DOOR</div>
+      </div>
+
+      <div class="video">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/xcFByoesPDM?autoplay=1&mute=1&loop=1&playlist=xcFByoesPDM&controls=0&modestbranding=1&playsinline=1&rel=0"
+          title="Wol's Project"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen></iframe>
+        <div class="badge">Wol's Project</div>
+      </div>
+    </div>
+
+    <!-- CAREER -->
+    <section>
+      <h2>Career</h2>
+
+      <h3>Director of Photography</h3>
+      <div style="margin-top:30px;">
+        <div style="margin-bottom:10px;opacity:.6;">Feature Film</div>
+        <p>Hakel Dema</p>
+      </div>
+
+      <div style="margin-top:30px;">
+        <div style="margin-bottom:10px;opacity:.6;">Short Film</div>
+        <p>러브 인 바이러스</p>
+        <p>호접몽</p>
+        <p>소희</p>
+        <p>혹한</p>
+        <p>여로</p>
+      </div>
+
+      <div style="margin-top:30px;">
+        <div style="margin-bottom:10px;opacity:.6;">Viral</div>
+        <p>Boy Next Door ASMR</p>
+        <p>Wol's Project (3 clips)</p>
+      </div>
+
+      <h3 style="margin-top:70px;">Assistant Camera</h3>
+      <div style="margin-top:30px;line-height:1.8;">
+        <p>라이어 — 2nd AC</p>
+        <p>키스는 괜히해서 — 2nd AC</p>
+        <p>슬픈열대 — 2nd AC</p>
+        <p>나인퍼즐 — 2nd AC</p>
+        <p>열녀박씨 계약결혼뎐 — 2nd AC</p>
+        <p>기생수 : 더 그레이 — 2nd AC</p>
+        <p>블라인드 — 2nd AC</p>
+        <p>검은소년 — 2nd AC</p>
+        <p>마인 — 3rd AC (B Unit)</p>
+        <p>갯마을 차차차 — 3rd AC (B Unit)</p>
+        <p>보호자 — 3rd AC</p>
+        <p>더 킹 : 영원의 군주 — 3rd AC</p>
+        <p>출장수사 — 3rd AC</p>
+        <p>어비스 — 3rd AC (B Unit)</p>
+        <p>아내를 죽였다 — 3rd AC</p>
+        <p>비스트 — 4th AC</p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section>
+      <h2>Contact</h2>
+      <p><a href="mailto:sish0905@gmail.com">sish0905@gmail.com</a></p>
+      <p><a href="https://instagram.com/leeseuneun" target="_blank" rel="noopener noreferrer">Instagram @leeseuneun</a></p>
+    </section>
+
+    <footer>© 2026 Lee Seungeun. All rights reserved.</footer>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll(".tab");
+    const panels = document.querySelectorAll(".panel");
+
+    function show(tabId){
+      panels.forEach(p => p.style.display = (p.id === tabId) ? "block" : "none");
+      tabs.forEach(t => t.classList.toggle("active", t.dataset.tab === tabId));
+    }
+
+    tabs.forEach(t => {
+      t.addEventListener("click", () => show(t.dataset.tab));
+      t.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") show(t.dataset.tab);
+      });
+    });
+  </script>
+</body>
+</html>
