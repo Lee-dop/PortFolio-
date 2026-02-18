@@ -1,65 +1,27 @@
 <!doctype html>
-<html lang="en">
+<html lang="ko">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Lee Seungeun | Cinematographer</title>
   <style>
     :root{--bg:#2e2e2e;--text:#fff;--muted:#aaa;--line:#444;}
-    body{
-      margin:0;
-      background:var(--bg);
-      color:var(--text);
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-    }
+    body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;}
     .container{max-width:1100px;margin:0 auto;padding:40px 20px;}
     .hero{text-align:center;padding:120px 0;}
     h1{font-size:52px;margin:0;font-weight:600;}
     .subtitle{margin-top:24px;color:var(--muted);font-size:18px;}
-    .tabs{
-      display:flex;gap:60px;justify-content:center;
-      margin-bottom:80px;letter-spacing:.2em;user-select:none;
-    }
-    .tab{
-      cursor:pointer;border-bottom:1px solid transparent;
-      padding-bottom:8px;opacity:.5;
-    }
+    .tabs{display:flex;gap:60px;justify-content:center;margin-bottom:80px;letter-spacing:.2em;user-select:none;}
+    .tab{cursor:pointer;border-bottom:1px solid transparent;padding-bottom:8px;opacity:.5;}
     .tab.active{border-bottom:1px solid #fff;opacity:1;}
-
-    a.cardlink{display:block;text-decoration:none;margin-bottom:100px;}
-    .card{
-      position:relative;width:100%;padding-top:56.25%;
-      background-color:#000;border-radius:16px;overflow:hidden;
-      background-size:cover;background-position:center;
-      background-image:linear-gradient(to top, rgba(0,0,0,.75), rgba(0,0,0,.15));
-    }
-    .card::after{
-      content:"";
-      position:absolute;inset:0;
-      background:linear-gradient(to top, rgba(0,0,0,.75), rgba(0,0,0,.15));
-      pointer-events:none;
-    }
-    .playwrap{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;z-index:1;}
-    .playbtn{
-      width:64px;height:64px;border-radius:999px;border:1px solid rgba(255,255,255,.6);
-      display:flex;align-items:center;justify-content:center;
-      backdrop-filter:blur(6px);background:rgba(0,0,0,.25);
-    }
-    .tri{
-      width:0;height:0;border-top:10px solid transparent;border-bottom:10px solid transparent;
-      border-left:16px solid rgba(255,255,255,.9);margin-left:4px;
-    }
-    .title{
-      position:absolute;bottom:18px;left:18px;z-index:1;
+    .video{position:relative;width:100%;padding-top:56.25%;background:#000;border-radius:16px;overflow:hidden;margin-bottom:100px;}
+    iframe{position:absolute;inset:0;width:100%;height:100%;border:0;}
+    .badge{
+      position:absolute;bottom:18px;left:18px;
       letter-spacing:.12em;color:#fff;font-size:14px;
+      background:rgba(0,0,0,.35);padding:6px 10px;border-radius:6px;
       text-shadow:0 2px 12px rgba(0,0,0,.6);
     }
-    .hint{
-      position:absolute;top:18px;right:18px;z-index:1;
-      font-size:11px;letter-spacing:.16em;color:rgba(255,255,255,.75);
-      text-transform:uppercase;
-    }
-
     section{padding:100px 0;border-top:1px solid var(--line);}
     h2{margin:0 0 60px;}
     h3{margin:40px 0 10px;color:var(--muted);letter-spacing:.15em;font-size:14px;font-weight:600;}
@@ -83,56 +45,62 @@
 
     <!-- FILM -->
     <div id="film" class="panel">
-      <a class="cardlink" href="https://youtu.be/aBKHyPnMG9c" target="_blank" rel="noopener noreferrer">
-        <div class="card" style="background-image:url('https://i.ytimg.com/vi/aBKHyPnMG9c/hqdefault.jpg');">
-          <div class="playwrap"><div class="playbtn"><div class="tri"></div></div></div>
-          <div class="title">러브 인 바이러스</div>
-          <div class="hint">Open on YouTube</div>
-        </div>
-      </a>
+      <div class="video">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/aBKHyPnMG9c?autoplay=1&mute=1&loop=1&playlist=aBKHyPnMG9c&controls=0&modestbranding=1&playsinline=1&rel=0"
+          title="러브 인 바이러스"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen></iframe>
+        <div class="badge">러브 인 바이러스</div>
+      </div>
 
-      <a class="cardlink" href="https://youtu.be/y71DnTXWOSU" target="_blank" rel="noopener noreferrer">
-        <div class="card" style="background-image:url('https://i.ytimg.com/vi/y71DnTXWOSU/hqdefault.jpg');">
-          <div class="playwrap"><div class="playbtn"><div class="tri"></div></div></div>
-          <div class="title">호접몽</div>
-          <div class="hint">Open on YouTube</div>
-        </div>
-      </a>
+      <div class="video">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/y71DnTXWOSU?autoplay=1&mute=1&loop=1&playlist=y71DnTXWOSU&controls=0&modestbranding=1&playsinline=1&rel=0"
+          title="호접몽"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen></iframe>
+        <div class="badge">호접몽</div>
+      </div>
 
-      <a class="cardlink" href="https://youtu.be/lP7rPHbls9o" target="_blank" rel="noopener noreferrer">
-        <div class="card" style="background-image:url('https://i.ytimg.com/vi/lP7rPHbls9o/hqdefault.jpg');">
-          <div class="playwrap"><div class="playbtn"><div class="tri"></div></div></div>
-          <div class="title">소희</div>
-          <div class="hint">Open on YouTube</div>
-        </div>
-      </a>
+      <div class="video">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/lP7rPHbls9o?autoplay=1&mute=1&loop=1&playlist=lP7rPHbls9o&controls=0&modestbranding=1&playsinline=1&rel=0"
+          title="소희"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen></iframe>
+        <div class="badge">소희</div>
+      </div>
 
-      <a class="cardlink" href="https://youtu.be/0ynmyvdH9p0" target="_blank" rel="noopener noreferrer">
-        <div class="card" style="background-image:url('https://i.ytimg.com/vi/0ynmyvdH9p0/hqdefault.jpg');">
-          <div class="playwrap"><div class="playbtn"><div class="tri"></div></div></div>
-          <div class="title">혹한</div>
-          <div class="hint">Open on YouTube</div>
-        </div>
-      </a>
+      <div class="video">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/0ynmyvdH9p0?autoplay=1&mute=1&loop=1&playlist=0ynmyvdH9p0&controls=0&modestbranding=1&playsinline=1&rel=0"
+          title="혹한"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen></iframe>
+        <div class="badge">혹한</div>
+      </div>
     </div>
 
     <!-- VIRAL -->
     <div id="viral" class="panel" style="display:none;">
-      <a class="cardlink" href="https://youtu.be/nfzuyIY45J8" target="_blank" rel="noopener noreferrer">
-        <div class="card" style="background-image:url('https://i.ytimg.com/vi/nfzuyIY45J8/hqdefault.jpg');">
-          <div class="playwrap"><div class="playbtn"><div class="tri"></div></div></div>
-          <div class="title">BOY NEXT DOOR</div>
-          <div class="hint">Open on YouTube</div>
-        </div>
-      </a>
+      <div class="video">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/nfzuyIY45J8?autoplay=1&mute=1&loop=1&playlist=nfzuyIY45J8&controls=0&modestbranding=1&playsinline=1&rel=0"
+          title="BOY NEXT DOOR"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen></iframe>
+        <div class="badge">BOY NEXT DOOR</div>
+      </div>
 
-      <a class="cardlink" href="https://youtu.be/xcFByoesPDM" target="_blank" rel="noopener noreferrer">
-        <div class="card" style="background-image:url('https://i.ytimg.com/vi/xcFByoesPDM/hqdefault.jpg');">
-          <div class="playwrap"><div class="playbtn"><div class="tri"></div></div></div>
-          <div class="title">Wol's Project</div>
-          <div class="hint">Open on YouTube</div>
-        </div>
-      </a>
+      <div class="video">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/xcFByoesPDM?autoplay=1&mute=1&loop=1&playlist=xcFByoesPDM&controls=0&modestbranding=1&playsinline=1&rel=0"
+          title="Wol's Project"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen></iframe>
+        <div class="badge">Wol's Project</div>
+      </div>
     </div>
 
     <!-- CAREER -->
@@ -194,10 +162,12 @@
   <script>
     const tabs = document.querySelectorAll(".tab");
     const panels = document.querySelectorAll(".panel");
+
     function show(tabId){
       panels.forEach(p => p.style.display = (p.id === tabId) ? "block" : "none");
       tabs.forEach(t => t.classList.toggle("active", t.dataset.tab === tabId));
     }
+
     tabs.forEach(t => {
       t.addEventListener("click", () => show(t.dataset.tab));
       t.addEventListener("keydown", (e) => {
