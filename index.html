@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lee Seungeun | Cinematographer</title>
+  <style>
+    :root{
+      --bg:#2e2e2e;
+      --text:#fff;
+      --muted:#aaa;
+      --line:#444;
+    }
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    }
+    .container{max-width:1100px;margin:0 auto;padding:40px 20px;}
+    .hero{text-align:center;padding:120px 0;}
+    h1{font-size:52px;margin:0;font-weight:600;}
+    .subtitle{margin-top:24px;color:var(--muted);font-size:18px;}
+    .tabs{display:flex;gap:60px;justify-content:center;margin:20px 0 70px;letter-spacing:.2em;user-select:none;}
+    .tab{cursor:pointer;padding-bottom:8px;border-bottom:1px solid transparent;opacity:.5;}
+    .tab.active{border-bottom:1px solid #fff;opacity:1;}
+
+    /* Video grid */
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr;
+      gap:32px;
+      margin-bottom: 20px;
+    }
+    @media (min-width: 900px){
+      .grid{ grid-template-columns: 1fr 1fr; }
+    }
+
+    .card{
+      position:relative;
+      width:100%;
+      padding-top:56.25%;
+      background:#000;
+      border-radius:16px;
+      overflow:hidden;
+    }
+    iframe{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      border:0;
+    }
+    .title{
+      position:absolute;
+      bottom:16px;
+      left:16px;
+      letter-spacing:.12em;
+      font-size:13px;
+      text-shadow:0 2px 12px rgba(0,0,0,.6);
+      pointer-events:none;
+    }
+    .overlay{
+      position:absolute;
+      inset:0;
+      background:linear-gradient(to top, rgba(0,0,0,.75), rgba(0,0,0,.18) 55%, rgba(0,0,0,0) 80%);
+      pointer-events:none;
+    }
+
+    section{padding:100px 0;border-top:1px solid var(--line);}
+    h2{margin:0 0 60px;}
+    h3{margin:40px 0 10px;color:var(--muted);letter-spacing:.15em;font-size:14px;font-weight:600;}
+    p{margin:6px 0;}
+    a{color:var(--muted);text-decoration:none;}
+    footer{text-align:center;color:#666;padding:80px 0;font-size:13px;border-top:1px solid var(--line);}
+    @media (max-width:640px){
+      h1{font-size:40px}
+      .tabs{gap:30px}
+    }
+    .note{color:rgba(255,255,255,.65);font-size:12px;letter-spacing:.08em;margin:-40px 0 40px;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hero">
+      <h1>Lee Seungeun</h1>
+      <div class="subtitle">Cinematographer based in Seoul.</div>
+    </div>
+
+    <div class="tabs" aria-label="Work categories">
+      <div class="tab active" data-tab="film" role="button" tabindex="0">FILM</div>
+      <div class="tab" data-tab="viral" role="button" tabindex="0">VIRAL</div>
+    </div>
+
+    <div class="note">All clips autoplay muted & loop (when embeds are allowed by the browser/network).</div>
+
+    <!-- FILM GRID (all play at once) -->
+    <div id="film" class="panel">
+      <div class="grid">
+        <div class="card">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/y71DnTXWOSU?autoplay=1&mute=1&loop=1&playlist=y71DnTXWOSU&controls=0&modestbranding=1&playsinline=1&rel=0"
+            title="호접몽"
+            loading="lazy"
+            allow="autoplay; encrypted-media; picture-in-picture"
+            allowfullscreen></iframe>
+          <div class="overlay"></div>
+          <div class="title">호접몽</div>
+        </div>
+
+        <div class="card">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/lP7rPHbls9o?autoplay=1&mute=1&loop=1&playlist=lP7rPHbls9o&controls=0&modestbranding=1&playsinline=1&rel=0"
+            title="소희"
+            loading="lazy"
+            allow="autoplay; encrypted-media; picture-in-picture"
+            allowfullscreen></iframe>
+          <div class="overlay"></div>
+          <div class="title">소희</div>
+        </div>
+
+        <div class="card">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/0ynmyvdH9p0?autoplay=1&mute=1&loop=1&playlist=0ynmyvdH9p0&controls=0&modestbranding=1&playsinline=1&rel=0"
+            title="혹한"
+            loading="lazy"
+            allow="autoplay; encrypted-media; picture-in-picture"
+            allowfullscreen></iframe>
+          <div class="overlay"></div>
+          <div class="title">혹한</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIRAL GRID (all play at once) -->
+    <div id="viral" class="panel" style="display:none">
+      <div class="grid">
+        <div class="card">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/nfzuyIY45J8?autoplay=1&mute=1&loop=1&playlist=nfzuyIY45J8&controls=0&modestbranding=1&playsinline=1&rel=0"
+            title="BOY NEXT DOOR"
+            loading="lazy"
+            allow="autoplay; encrypted-media; picture-in-picture"
+            allowfullscreen></iframe>
+          <div class="overlay"></div>
+          <div class="title">BOY NEXT DOOR</div>
+        </div>
+
+        <div class="card">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/xcFByoesPDM?autoplay=1&mute=1&loop=1&playlist=xcFByoesPDM&controls=0&modestbranding=1&playsinline=1&rel=0"
+            title="Wol's Project"
+            loading="lazy"
+            allow="autoplay; encrypted-media; picture-in-picture"
+            allowfullscreen></iframe>
+          <div class="overlay"></div>
+          <div class="title">Wol's Project</div>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <h2>Career</h2>
+
+      <h3>Director of Photography</h3>
+      <p>Hakel Dema — Feature Film</p>
+
+      <h3>Short Film</h3>
+      <p>호접몽</p>
+      <p>소희</p>
+      <p>혹한</p>
+      <p>여로</p>
+
+      <h3>Viral</h3>
+      <p>Boy Next Door ASMR</p>
+      <p>Wol's Project (3 clips)</p>
+
+      <h3>Assistant Camera</h3>
+      <p>비스트 — 4th AC</p>
+      <p>아내를 죽였다 — 3rd AC</p>
+      <p>출장수사 — 3rd AC</p>
+      <p>더 킹 : 영원의 군주 — 3rd AC</p>
+      <p>보호자 — 3rd AC</p>
+      <p>검은소년 — 2nd AC</p>
+      <p>블라인드 — 2nd AC</p>
+      <p>기생수 : 더 그레이 — 2nd AC</p>
+      <p>열녀박씨 계약결혼뎐 — 2nd AC</p>
+      <p>나인퍼즐 — 2nd AC</p>
+      <p>슬픈열대 — 2nd AC</p>
+      <p>키스는 괜히해서 — 2nd AC</p>
+    </section>
+
+    <section>
+      <h2>Contact</h2>
+      <p><a href="mailto:sish0905@gmail.com">sish0905@gmail.com</a></p>
+      <p><a href="https://instagram.com/leeseuneun" target="_blank" rel="noopener noreferrer">Instagram @leeseuneun</a></p>
+    </section>
+
+    <footer>© 2026 Lee Seungeun. All rights reserved.</footer>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll(".tab");
+    const panels = document.querySelectorAll(".panel");
+
+    function show(tabId){
+      panels.forEach(p => p.style.display = (p.id === tabId) ? "block" : "none");
+      tabs.forEach(t => t.classList.toggle("active", t.dataset.tab === tabId));
+    }
+
+    tabs.forEach(t => {
+      t.addEventListener("click", () => show(t.dataset.tab));
+      t.addEventListener("keydown", (e) => {
+        if(e.key === "Enter" || e.key === " ") show(t.dataset.tab);
+      });
+    });
+  </script>
+</body>
+</html>
